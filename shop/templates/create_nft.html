@@ -1,0 +1,317 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block confirm %}
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8">
+                    <div class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <div class="title is-1 has-text-weight-bold">
+                                    Create single <br> collectible
+                                </div>
+                            </div>
+                        </div>
+                        <div class="level-right">
+                            <div class="level-item">
+                                <div class="button is-rounded is-normal has-text-centered">Switch to Multiple</div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="subtitle is-4 mb-3"><strong>Upload file</strong></div>
+                    <div class="subtitle is-6 has-text-lightgrey">Drag or choose your file to upload</div>
+                    <figure class="image">
+                        <img src="{% static 'upload field.png' %}" alt="">
+                    </figure>
+                    <br>
+                    <div class="subtitle is-4 mt-5"><strong>Item Details</strong></div>
+                    <form method="post" class="form" style="margin-left: -20px;">
+                        {% csrf_token %}
+                        {{ form }}
+                        <div class="field is-horizontal" style="margin-left: -9.5rem; margin-top: 10px;">
+                            <div class="field-label is-normal"></div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <p class="subtitle"
+                                       style="color: #B1B5C3; font-size: 15px; font-weight: bold; margin-bottom: 2px;">
+                                        ROYALTIES</p>
+                                    <p class="control is-expanded has-icons-left">
+                                        <input class="input" type="text" placeholder="10%">
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <p class="subtitle"
+                                       style="color: #B1B5C3; font-size: 15px; font-weight: bold; margin-bottom: 2px;">
+                                        SIZE</p>
+                                    <p class="control is-expanded has-icons-left">
+                                        <input class="input" type="text" placeholder="e. g. Size">
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <p class="subtitle"
+                                       style="color: #B1B5C3; font-size: 15px; font-weight: bold; margin-bottom: 2px;">
+                                        PROPERTIE</p>
+                                    <p class="control is-expanded has-icons-left">
+                                        <input class="input" type="text" placeholder="e. g. Propertie">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="level">
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <div class="content">
+                                        <p class="title" style="font-size: 25px;">Put on sale</p>
+                                        <p class="subtitle is-6" style="color: #777E90;">You’ll receive bids on this
+                                            item</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <input type="checkbox" id="toggle-button" class="toggle-button">
+                                    <label for="toggle-button" class="text"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="level">
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <div class="content">
+                                        <p class="title" style="font-size: 25px;">Instant sale price</p>
+                                        <p class="subtitle is-6" style="color: #777E90;">Enter the price for which the
+                                            item will be instantly sold</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <input type="checkbox" id="toggle-button" class="toggle-button">
+                                    <label for="toggle-button" class="text"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="level">
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <div class="content">
+                                        <p class="title" style="font-size: 25px;">Unlock once purchased</p>
+                                        <p class="subtitle is-6" style="color: #777E90;">Content will be unlocked after
+                                            successful transaction</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <input type="checkbox" id="toggle-button" class="toggle-button">
+                                    <label for="toggle-button" class="text"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="level">
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <div class="content">
+                                        <p class="title" style="font-size: 25px;">Choose collection</p>
+                                        <p class="subtitle is-6" style="color: #777E90;">Choose an exiting collection or
+                                            create a new one</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="buttons">
+                            <a class="button has-text-left"
+                               style="background-color: #F4F5F6; width: 155px; height: 124px;border-radius: 12px;">
+                                <figure class="image">
+                                    <img src="{% static 'Frame_button1.png' %}" alt="">
+                                </figure>
+                                <div class="content">
+                                    <p class="subtitle is-6"><strong>Create <br>collection</strong></p>
+                                </div>
+                            </a>
+                            <a class="button has-text-left"
+                               style="background-color: #F4F5F6; width: 155px; height: 124px;border-radius: 12px;">
+                                <figure class="image">
+                                    <img src="{% static 'Frame_button2.png' %}" alt="">
+                                </figure>
+                                <div class="content">
+                                    <p class="subtitle is-6"><strong>Create <br>collection</strong></p>
+                                </div>
+                            </a>
+                            <a class="button has-text-left"
+                               style="background-color: #F4F5F6; width: 155px; height: 124px;border-radius: 12px;">
+                                <figure class="image">
+                                    <img src="{% static 'Frame_button3.png' %}" alt="">
+                                </figure>
+                                <div class="content">
+                                    <p class="subtitle is-6"><strong>Create <br>collection</strong></p>
+                                </div>
+                            </a>
+                            <a class="button has-text-left"
+                               style="background-color: #F4F5F6; width: 155px; height: 124px;border-radius: 12px;">
+                                <figure class="image">
+                                    <img src="{% static 'Frame_button4.png' %}" alt="">
+                                </figure>
+                                <div class="content">
+                                    <p class="subtitle is-6"><strong>Create <br>collection</strong></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="level">
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <button type="submit" class="button is-link is-rounded is-medium"
+                                            onclick="toggleModal()">Create item <img class="ml-4"
+                                                                                     src="{% static 'arrow-right shape.png' %}"
+                                                                                     alt=""></button>
+                                </div>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <a class="button is-rounded is-medium">Auto saving <img class="ml-2"
+                                                                                            src="{% static 'Shape.png' %}"
+                                                                                            alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="column productsize2 is-4">
+                    <div class="box">
+                        <div class="mt-5">
+                            <a href="">
+                                <figure class="image">
+                                    <img src="{% static 'discover img 2.png' %}" style="border-radius: 15px;">
+                                </figure>
+                            </a>
+                            <div class="level m-0">
+                                <div class="level-left">
+                                    <p class="title is-6 mt-4">Amazing digital art</p>
+                                </div>
+                                <div class="level-right mt-4">
+                                    <button class="button is-small is-ghost ethbord wounder"><strong>2.45 ETH</strong>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="border-none">
+                                <div class="level m-0 mt-3">
+                                    <div class="level-left">
+                                        <div class="level-item">
+                                            <figure class="image mr-4">
+                                                <img src="{% static 'avatars=3.png' %}" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="level-right">
+                                        <div class="level-item">
+                                            <p class="title is-6 has-text-weight-medium">3 in stock</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <hr class="m-0">
+                            <div class="level m-0 mt-5">
+                                <div class="level-left">
+                                    <nav class="level-item">
+                                        <div class="lv-2">
+                                            <figure class="image">
+                                                <img src="{% static 'Line.svg' %}" alt="">
+                                            </figure>
+                                            <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1">Highest
+                                                bid
+                                                <span class="has-text-black has-text-weight-bold">0.001 ETH</span>
+                                        </div>
+                                    </nav>
+                                </div>
+                                <div class="level-right">
+                                    <div class="level-item">
+                                        <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1"><span
+                                                class="">New bid 🔥</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section">
+        <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div style="margin-left: 35px;" class="box b-r">
+                    <h1 class="title is-2">Folow steps</h1>
+                    <a href="">
+                        <figure class="image is-32x32" style="margin-left: 420px; margin-top: -55px;">
+                            <img src="{% static 'close.png' %}" alt="">
+                        </figure>
+                    </a>
+                    <br><br>
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="{% static 'docright.png' %}" alt="">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-5">Upload files & Mint token</p>
+                            <p class="subtitle is-6 has-text-grey has-text-weight-medium">Call contract method</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="has-text-centered">
+                        <button class="button is-medium is-info is-rounded"><span class="has-text-white title is-6">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Start now⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
+                        </button>
+                    </div>
+                    <br>
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="{% static 'pencil.png' %}" alt="">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-5">Sign sell order</p>
+                            <p class="subtitle is-6 has-text-grey has-text-weight-medium">Sign sell order using your
+                                wallet</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="has-text-centered">
+                        <button class="button is-medium is-info is-rounded opac" title="Disabled button" disabled><span
+                                class="has-text-white title is-6">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Start now⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
+                        </button>
+                    </div>
+                    <br>
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="{% static 'bag.png' %}" alt="">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-5">Sign lock order</p>
+                            <p class="subtitle is-6 has-text-grey has-text-weight-medium">Sign lock order using your
+                                wallet</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="has-text-centered">
+                        <button class="button is-medium is-info is-rounded opac" title="Disabled button" disabled><span
+                                class="has-text-white title is-6">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Start now⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+    </div>
+{% endblock %}

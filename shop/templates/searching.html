@@ -1,0 +1,604 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block searching %}
+    <section class="section">
+        <div class="container">
+            <br><br>
+            <div class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <p style="font-weight: 400" class="title is-3">Type your keyboards</p>
+                    </div>
+                </div>
+                <div class="level-right">
+                    <div class="level-item">
+                        <button class="button is-ghost is-rounded p-0 border-none">
+                            <img src="./img/search.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6">
+                <hr>
+            </div>
+            <br>
+            <nav class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <div class="select">
+                            <select style="border-radius: 11px;">
+                                <option>Recently added</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="level-right">
+                    <button class="button is-white buttbord" style="color: #777E91;"><b>All items</b></button>
+                    <button class="button is-white buttbord" style="color: #777E91;"><b>Art</b></button>
+                    <button class="button is-white buttbord" style="color: #777E91;"><b>Game</b></button>
+                    <button class="button is-white buttbord" style="color: #777E91;"><b>Photography</b></button>
+                    <button class="button is-white buttbord" style="color: #777E91;"><b>Music</b></button>
+                    <button class="button is-white buttbord" style="color: #777E91;"><b>Video</b></button>
+                </div>
+            </nav>
+            <div class="columns is-centered">
+                <div class="column">
+                    <hr>
+                    <div class="">
+                        <p class="subtitle is-7 has-text-grey-light m-0"><b>LIKES</b></p>
+                        <div class="select mt-3">
+                            <select style="border-radius: 11px;">
+                                <option>Most likes⠀⠀</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="">
+                        <p class="subtitle is-7 has-text-grey-light m-0"><b>OPEN</b></p>
+                        <div class="select mt-3">
+                            <select style="border-radius: 11px;">
+                                <option>Colors⠀⠀⠀</option>
+                                <option>Black</option>
+                                <option>Green</option>
+                                <option>Pink</option>
+                                <option>Purple</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="">
+                        <p class="subtitle is-7 has-text-grey-light m-0"><b>CREATOR</b></p>
+                        <div class="select mt-3">
+                            <select style="border-radius: 11px;">
+                                <option>Verified only⠀⠀</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box mt-5" style="border-radius: 20px; width: auto; height: auto;">
+                        <a href="">
+                            <figure class="image">
+                                <img src="{% static 'discover img 2.png' %}"
+                                     style="border-radius: 15px; width: 232px; height: 269.03px;">
+                            </figure>
+                        </a>
+                        <nav class="level m-0 mt-4">
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <p class="title is-6">Amazing digital art</p>
+                                </div>
+                            </div>
+                            <div class="level-right mt-">
+                                <div class="level-item">
+                                    <button class="button is-small is-ghost ethbord wounder"><strong>2.45 ETH</strong>
+                                    </button>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="border-none">
+                            <div class="level m-0 mt-3">
+                                <div class="level-left">
+                                    <div class="level-item">
+                                        <figure class="image mr-4">
+                                            <img src="{% static 'avatars=3.png' %}" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <div class="level-item">
+                                        <p class="title is-6 has-text-weight-medium">3 in stock</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="m-0">
+                        <div class="level m-0 mt-5">
+                            <div class="level-left">
+                                <nav class="level-item">
+                                    <div class="lv-2">
+                                        <figure class="image">
+                                            <img src="{% static 'Line.svg' %}" alt="">
+                                        </figure>
+                                        <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1">Highest bid
+                                            <span class="has-text-black has-text-weight-bold">0.001 ETH</span>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1"><span class="">New bid 🔥</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box mt-5" style="border-radius: 20px;">
+                        <a href="">
+                            <figure class="image">
+                                <img src="{% static 'pi.png' %}"
+                                     style="border-radius: 15px; width: 232px; height: 269.03px;">
+                            </figure>
+                        </a>
+                        <div class="level m-0">
+                            <div class="level-left">
+                                <p class="title is-6 mt-4">Amazing digital art</p>
+                            </div>
+                            <div class="level-right mt-4">
+                                <button class="button is-small is-ghost ethbord wounder"><strong>2.45 ETH</strong>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="border-none">
+                            <div class="level m-0 mt-3">
+                                <div class="level-left">
+                                    <div class="level-item">
+                                        <figure class="image mr-4">
+                                            <img src="{% static 'avatars=3.png' %}" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <div class="level-item">
+                                        <p class="title is-6 has-text-weight-medium">3 in stock</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="m-0">
+                        <div class="level m-0 mt-5">
+                            <div class="level-left">
+                                <nav class="level-item">
+                                    <div class="lv-2">
+                                        <figure class="image">
+                                            <img src="{% static 'Line.svg' %}" alt="">
+                                        </figure>
+                                        <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1">Highest bid
+                                            <span class="has-text-black has-text-weight-bold">0.001 ETH</span>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1"><span class="">New bid 🔥</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box mt-5" style="border-radius: 20px;">
+                        <a href="">
+                            <figure class="image">
+                                <img src="{% static 'product img111.png' %}" style="border-radius: 15px;">
+                            </figure>
+                        </a>
+                        <div class="level m-0">
+                            <div class="level-left">
+                                <p class="title is-6 mt-4">Amazing digital art</p>
+                            </div>
+                            <div class="level-right mt-4">
+                                <button class="button is-small is-ghost ethbord wounder"><strong>2.45 ETH</strong>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="border-none">
+                            <div class="level m-0 mt-3">
+                                <div class="level-left">
+                                    <div class="level-item">
+                                        <figure class="image mr-4">
+                                            <img src="{% static 'avatars=3.png' %}" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <div class="level-item">
+                                        <p class="title is-6 has-text-weight-medium">3 in stock</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="m-0">
+                        <div class="level m-0 mt-5">
+                            <div class="level-left">
+                                <nav class="level-item">
+                                    <div class="lv-2">
+                                        <figure class="image">
+                                            <img src="{% static 'Line.svg' %}" alt="">
+                                        </figure>
+                                        <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1">Highest bid
+                                            <span class="has-text-black has-text-weight-bold">0.001 ETH</span>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1"><span class="">New bid 🔥</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns is-centered">
+                <div class="column"></div>
+                <div class="column">
+                    <div class="box mt-5" style="border-radius: 20px;">
+                        <a href="">
+                            <figure class="image">
+                                <img src="{% static 'productimg4.png' %}"
+                                     style="border-radius: 15px; width: 232px; height: 269.03px;">
+                            </figure>
+                        </a>
+                        <div class="level m-0">
+                            <div class="level-left">
+                                <p class="title is-6 mt-4">Amazing digital art</p>
+                            </div>
+                            <div class="level-right mt-4">
+                                <button class="button is-small is-ghost ethbord wounder"><strong>2.45 ETH</strong>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="border-none">
+                            <div class="level m-0 mt-3">
+                                <div class="level-left">
+                                    <div class="level-item">
+                                        <figure class="image mr-4">
+                                            <img src="{% static 'avatars=3.png' %}" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <div class="level-item">
+                                        <p class="title is-6 has-text-weight-medium">3 in stock</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="m-0">
+                        <div class="level m-0 mt-5">
+                            <div class="level-left">
+                                <nav class="level-item">
+                                    <div class="lv-2">
+                                        <figure class="image">
+                                            <img src="{% static 'Line.svg' %}" alt="">
+                                        </figure>
+                                        <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1">Highest bid
+                                            <span class="has-text-black has-text-weight-bold">0.001 ETH</span>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1"><span class="">New bid 🔥</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box mt-5" style="border-radius: 20px;">
+                        <a href="">
+                            <figure class="image">
+                                <img src="{% static 'discover img 1.png' %}"
+                                     style="border-radius: 15px; width: 232px; height: 269.03px;">
+                            </figure>
+                        </a>
+                        <div class="level m-0">
+                            <div class="level-left">
+                                <p class="title is-6 mt-4">Amazing digital art</p>
+                            </div>
+                            <div class="level-right mt-4">
+                                <button class="button is-small is-ghost ethbord wounder"><strong>2.45 ETH</strong>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="border-none">
+                            <div class="level m-0 mt-3">
+                                <div class="level-left">
+                                    <div class="level-item">
+                                        <figure class="image mr-4">
+                                            <img src="{% static 'avatars=3.png' %}" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <div class="level-item">
+                                        <p class="title is-6 has-text-weight-medium">3 in stock</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="m-0">
+                        <div class="level m-0 mt-5">
+                            <div class="level-left">
+                                <nav class="level-item">
+                                    <div class="lv-2">
+                                        <figure class="image">
+                                            <img src="{% static 'Line.svg' %}" alt="">
+                                        </figure>
+                                        <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1">Highest bid
+                                            <span class="has-text-black has-text-weight-bold">0.001 ETH</span>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1"><span class="">New bid 🔥</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box mt-5" style="border-radius: 20px;">
+                        <a href="">
+                            <figure class="image">
+                                <img src="{% static 'discover img 7.png' %}"
+                                     style="border-radius: 15px; width: 232px; height: 269.03px;">
+                            </figure>
+                        </a>
+                        <div class="level m-0">
+                            <div class="level-left">
+                                <p class="title is-6 mt-4">Amazing digital art</p>
+                            </div>
+                            <div class="level-right mt-4">
+                                <button class="button is-small is-ghost ethbord wounder"><strong>2.45 ETH</strong>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="border-none">
+                            <div class="level m-0 mt-3">
+                                <div class="level-left">
+                                    <div class="level-item">
+                                        <figure class="image mr-4">
+                                            <img src="{% static 'avatars=3.png' %}" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <div class="level-item">
+                                        <p class="title is-6 has-text-weight-medium">3 in stock</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="m-0">
+                        <div class="level m-0 mt-5">
+                            <div class="level-left">
+                                <nav class="level-item">
+                                    <div class="lv-2">
+                                        <figure class="image">
+                                            <img src="{% static 'Line.svg' %}" alt="">
+                                        </figure>
+                                        <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1">Highest bid
+                                            <span class="has-text-black has-text-weight-bold">0.001 ETH</span>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1"><span class="">New bid 🔥</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns is-centered">
+                <div class="column"></div>
+                <div class="column">
+                    <div class="box mt-5" style="border-radius: 20px;">
+                        <a href="">
+                            <figure class="image">
+                                <img src="{% static 'discover img 8.png' %}"
+                                     style="border-radius: 15px; width: 232px; height: 269.03px;">
+                            </figure>
+                        </a>
+                        <div class="level m-0">
+                            <div class="level-left">
+                                <p class="title is-6 mt-4">Amazing digital art</p>
+                            </div>
+                            <div class="level-right mt-4">
+                                <button class="button is-small is-ghost ethbord wounder"><strong>2.45 ETH</strong>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="border-none">
+                            <div class="level m-0 mt-3">
+                                <div class="level-left">
+                                    <div class="level-item">
+                                        <figure class="image mr-4">
+                                            <img src="{% static 'avatars=3.png' %}" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <div class="level-item">
+                                        <p class="title is-6 has-text-weight-medium">3 in stock</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="m-0">
+                        <div class="level m-0 mt-5">
+                            <div class="level-left">
+                                <nav class="level-item">
+                                    <div class="lv-2">
+                                        <figure class="image">
+                                            <img src="{% static 'Line.svg' %}" alt="">
+                                        </figure>
+                                        <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1">Highest bid
+                                            <span class="has-text-black has-text-weight-bold">0.001 ETH</span>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1"><span class="">New bid 🔥</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box mt-5" style="border-radius: 20px;">
+                        <a href="">
+                            <figure class="image">
+                                <img src="{% static 'productimg3.png' %}"
+                                     style="border-radius: 15px; width: 232px; height: 269.03px;">
+                            </figure>
+                        </a>
+                        <div class="level m-0">
+                            <div class="level-left">
+                                <p class="title is-6 mt-4">Amazing digital art</p>
+                            </div>
+                            <div class="level-right mt-4">
+                                <button class="button is-small is-ghost ethbord wounder"><strong>2.45 ETH</strong>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="border-none">
+                            <div class="level m-0 mt-3">
+                                <div class="level-left">
+                                    <div class="level-item">
+                                        <figure class="image mr-4">
+                                            <img src="{% static 'avatars=3.png' %}" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <div class="level-item">
+                                        <p class="title is-6 has-text-weight-medium">3 in stock</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="m-0">
+                        <div class="level m-0 mt-5">
+                            <div class="level-left">
+                                <nav class="level-item">
+                                    <div class="lv-2">
+                                        <figure class="image">
+                                            <img src="{% static 'Line.svg' %}" alt="">
+                                        </figure>
+                                        <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1">Highest bid
+                                            <span class="has-text-black has-text-weight-bold">0.001 ETH</span>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1"><span class="">New bid 🔥</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box mt-5" style="border-radius: 20px;">
+                        <a href="">
+                            <figure class="image">
+                                <img src="{% static 'product img222.png' %}"
+                                     style="border-radius: 15px; width: 232px; height: 269.03px;">
+                            </figure>
+                        </a>
+                        <div class="level m-0">
+                            <div class="level-left">
+                                <p class="title is-6 mt-4">Amazing digital art</p>
+                            </div>
+                            <div class="level-right mt-4">
+                                <button class="button is-small is-ghost ethbord wounder"><strong>2.45 ETH</strong>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="border-none">
+                            <div class="level m-0 mt-3">
+                                <div class="level-left">
+                                    <div class="level-item">
+                                        <figure class="image mr-4">
+                                            <img src="{% static 'avatars=3.png' %}" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <div class="level-item">
+                                        <p class="title is-6 has-text-weight-medium">3 in stock</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="m-0">
+                        <div class="level m-0 mt-5">
+                            <div class="level-left">
+                                <nav class="level-item">
+                                    <div class="lv-2">
+                                        <figure class="image">
+                                            <img src="{% static 'Line.svg' %}" alt="">
+                                        </figure>
+                                        <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1">Highest bid
+                                            <span class="has-text-black has-text-weight-bold">0.001 ETH</span>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <p class="title is-7 has-text-grey has-text-weight-normal mb-1 ml-1"><span class="">New bid 🔥</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button class="button is-rounded has-text-black has-text-centered" style="margin-left: 56%;" onclick="toggleModal()"><img
+                src="{% static 'Shape.png' %}" alt="">⠀Load more
+        </button>
+    </section>
+{% endblock %}

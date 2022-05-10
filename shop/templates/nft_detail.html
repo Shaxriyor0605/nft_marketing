@@ -1,0 +1,18 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block project %}
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <figure class="image">
+                        <img src="{{ product.thumb.url }}" alt="">
+                    </figure>
+                </div>
+                <div class="column"></div>
+                <div class="column"></div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

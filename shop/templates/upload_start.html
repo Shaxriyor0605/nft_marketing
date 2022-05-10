@@ -1,0 +1,53 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block auth %}
+    <section class="section">
+        <div class="has-text-centered">
+            <h2 class="title is-size-1 mb-6">Upload item</h2>
+            <p class="subtitle is-size-4">
+                Choose “Single” if you want your collectible to be one of a kind or “Multiple” if you
+                want to sell one <br> collectible multiple times
+            </p>
+            <br>
+            <br>
+        </div>
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-256x320">
+                                <img src="{% static 'upload_img_1.png' %}" alt="">
+                            </figure>
+                        </div>
+                        <br>
+                        <div class="has-text-centered">
+                            <a href="{% url 'shop:create' %}" class="button is-rounded is-medium">Create Single</a>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image image is-256x320">
+                                <img src="{% static 'upload_img_2.png' %}" alt="">
+                            </figure>
+                        </div>
+                        <br>
+                        <div class="has-text-centered">
+                            <button class="button is-rounded is-medium is-info ">Create Multiple</button>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p class="content has-text-centered has has-text-grey-light">
+                We do not own your private keys and cannot access your funds without your confirmation.
+            </p>
+        </div>
+    </section>
+{% endblock %}

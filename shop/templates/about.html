@@ -1,0 +1,62 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block slider %}
+    <section class="section">
+        <div class="container">
+            <div class="has-text-left">
+                <h1 class="title is-2">Edit profile</h1>
+                <p class="content is-4 has-text-grey" style="margin-bottom: 5rem;">You can set preferred display name,
+                    create your profile URL and manage other personal settings.</p>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-128x128 ">
+                                        <img class="is-rounded" src="{% static 'edit_profile_avatar.png' %}"
+                                             alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">Profile photo</p>
+                                    <p class="subtitle is-6">
+                                        We recommend an image <br>
+                                        of at least 400x400. <br> Gifs work too 🙌
+                                    </p>
+                                    <a class="button is-rounded is-normal">Upload</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="has-text-left">
+                        <p class="title is-4 has-text-weight-bold">Account info</p>
+                    </div>
+                    <div class="box">
+                        <form method="post" class="form mb-1">
+                            {% csrf_token %}
+                            {{ form }}
+                            <div class="button is-rounded ml-4 mb-5">
+                                Add more social account
+                            </div>
+                            <p class="content has-text-grey is-4 ml-4">
+                                To update your settings you should sign message <br> through your wallet. Click 'Update
+                                profile'
+                                then
+                                sign <br> the message
+                            </p>
+                            <div class="buttons ml-4">
+                                <button type="submit" class="button is-rounded is-link">Update Profile</button>
+                                <a href="{% url 'shop:about' %}" class="button is-inverted is-rounded">Clear all</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
